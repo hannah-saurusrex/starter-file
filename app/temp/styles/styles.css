@@ -1,3 +1,2 @@
-/* import all modularized css files into this file here
-/* an example would looke like @import "base/_global";
-/* this means you've created a folder called base, and a file called _global.css */
+body {
+  margin: 0 auto; }

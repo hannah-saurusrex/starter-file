@@ -14,14 +14,14 @@ function style() {
     .pipe(browserSync.stream())
 }
 
-// watch task; this watches specific files and automatically updates browsers for us!
+// watch task; watches specific files and automatically updates browsers for us!
 function watch() {
     browserSync.init({
         server: {
-            baseDir: 'app'
+            baseDir: "app"
         }
     });
-    gulp.watch('./app/assets/styles/styles.css', style);
+    gulp.watch('./app/assets/styles/**/*.css', style);
     gulp.watch('./app/*.html').on('change', browserSync.reload);
     gulp.watch('./app/assets/scripts/**/*.js').on('change', browserSync.reload);
 }
